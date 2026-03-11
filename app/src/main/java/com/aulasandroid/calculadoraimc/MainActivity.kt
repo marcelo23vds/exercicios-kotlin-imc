@@ -51,7 +51,7 @@ fun IMCScreen(modifier: Modifier = Modifier) {
     val corVerde = Color(0xFF43A047)
     val corLaranja = Color(0xFFFB8C00)
     val corVermelha = Color(0xFFE53935)
-    val corCabecalho = Color(0xFF56B5DD)
+    val corCabecalho = Color(0xFF053548)
 
     Column(
         modifier = modifier
@@ -107,7 +107,7 @@ fun IMCScreen(modifier: Modifier = Modifier) {
                     OutlinedTextField(
                         value = altura,
                         onValueChange = { altura = it },
-                        label = { Text("Altura (cm)") },
+                        label = { Text("Altura") },
                         modifier = Modifier.fillMaxWidth(),
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
                     )
@@ -117,7 +117,7 @@ fun IMCScreen(modifier: Modifier = Modifier) {
                     OutlinedTextField(
                         value = peso,
                         onValueChange = { peso = it },
-                        label = { Text("Peso (kg)") },
+                        label = { Text("Peso") },
                         modifier = Modifier.fillMaxWidth(),
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
                     )
@@ -154,7 +154,7 @@ fun IMCScreen(modifier: Modifier = Modifier) {
                                         corResultado = corVermelha
                                     }
                                     imc < 40.0 -> {
-                                        classificacao = "Obesidade grau II."
+                                        classificacao = "Obesidade  grau II."
                                         corResultado = corVermelha
                                     }
                                     else -> {
@@ -196,7 +196,7 @@ fun IMCScreen(modifier: Modifier = Modifier) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 20.dp),
-                // cor dinâmica
+                // cor dinamica
                 colors = CardDefaults.cardColors(containerColor = corResultado),
                 elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
             ) {
